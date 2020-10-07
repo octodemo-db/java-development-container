@@ -1,10 +1,10 @@
+FROM maven:3.6.3-openjdk-11
+
 ARG image_url=https://github.com/octodemo-db/java-development-container
 ARG version=1
 ARG revision=unknown
 
 # TODO support injection of versions of tools, Google Cloud SDK, Terraform/Terragrunt
-
-FROM maven:3.6.3-openjdk-11
 
 COPY scripts/*.sh /tmp/scripts/
 RUN apt-get update \
