@@ -24,7 +24,7 @@ LABEL org.opencontainers.image.version ${version}
 LABEL org.opencontainers.image.revision ${revision}
 LABEL org.opencontainers.image.vendor GitHub
 LABEL org.opencontainers.image.licenses MIT
-LABEL org.opencontainers.image.title GitHub Solutions Engineering Bookstore
+LABEL org.opencontainers.image.title GitHub Solutions Engineering Bookstore Development Tools Container
 LABEL org.opencontainers.image.description Container for Java development tools for the bookstore
 
 # USER vscode
