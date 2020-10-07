@@ -1,0 +1,34 @@
+name: Build and Publish Container
+
+on:
+  workflow_dispatch
+
+jobs:
+  build:
+    name: Build
+
+    runs-on: ubuntu-20.04
+
+    env:
+      container_tag: ghcr.io/${GITHUB_REPOSITORY}:latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout
+
+      - name: Build Container
+        run: |
+          docker build . --build-arg revision=$GITHUB_SHA --build-arg version=$GITHUB_RUN_NUMBER --tag $container_tag
+
+      # Publish the container if we successfully build under Linux
+      - name: Sign in to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.OCTODEMOBOT_GHPR_TOKEN }}
+          registry: ghcr.io
+      
+      - name: Publish Docker image
+        id: container_publish
+        run: |
+          docker push ${container_tag}
