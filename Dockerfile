@@ -17,11 +17,11 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* /tmp/scripts
 
 LABEL org.opencontainers.image.authors GitHub Solutions Engineering
-LABEL org.opencontainers.image.url ${image_url}
-LABEL org.opencontainers.image.documentation ${image_url}/README.md
-LABEL org.opencontainers.image.source ${image_url}
-LABEL org.opencontainers.image.version ${version}
-LABEL org.opencontainers.image.revision ${revision}
+LABEL org.opencontainers.image.url $image_url
+LABEL org.opencontainers.image.documentation $image_url/README.md
+LABEL org.opencontainers.image.source $image_url
+LABEL org.opencontainers.image.version $version
+LABEL org.opencontainers.image.revision $revision
 LABEL org.opencontainers.image.vendor GitHub
 LABEL org.opencontainers.image.licenses MIT
 LABEL org.opencontainers.image.title GitHub Solutions Engineering Bookstore Development Tools Container
