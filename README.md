@@ -12,7 +12,7 @@ The Container provides the following toolset:
 * Terragrunt
 
 
-To support GitHub Codespaces functionality
+To support GitHub Codespaces functionality:
 * .NET Core
 * oh-my-bash
 * Required OS libraries
