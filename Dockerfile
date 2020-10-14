@@ -17,16 +17,15 @@ RUN apt-get update \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/* /tmp/scripts
 
-LABEL \
-    org.opencontainers.image.authors GitHub Solutions Engineering \
-    org.opencontainers.image.url $image_url \
-    org.opencontainers.image.documentation $image_url/README.md \
-    org.opencontainers.image.source $image_url \
-    org.opencontainers.image.version $version \
-    org.opencontainers.image.revision $revision \
-    org.opencontainers.image.vendor GitHub \
-    org.opencontainers.image.licenses MIT \
-    org.opencontainers.image.title GitHub Solutions Engineering Bookstore Development Tools Container \
-    org.opencontainers.image.description Container for Java development tools for the bookstore
+LABEL org.opencontainers.image.authors GitHub Solutions Engineering
+LABEL org.opencontainers.image.url $image_url
+LABEL org.opencontainers.image.documentation $image_url/README.md
+LABEL org.opencontainers.image.source $image_url
+LABEL org.opencontainers.image.version $version
+LABEL org.opencontainers.image.revision $revision
+LABEL org.opencontainers.image.vendor GitHub
+LABEL org.opencontainers.image.licenses MIT
+LABEL org.opencontainers.image.title GitHub Solutions Engineering Bookstore Development Tools Container
+LABEL org.opencontainers.image.description Container for Java development tools for the bookstore
 
 # USER vscode
