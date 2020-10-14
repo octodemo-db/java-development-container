@@ -12,6 +12,7 @@ RUN apt-get update \
     && /bin/bash /tmp/scripts/installer.sh \
     && /bin/bash /tmp/scripts/google-cloud-sdk.sh \
     && /bin/bash /tmp/scripts/terraform.sh \
+    && /bin/bash /tmp/scripts/dotnet.sh \
     && apt-get autoremove -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/* /tmp/scripts

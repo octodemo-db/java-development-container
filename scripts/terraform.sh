@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 TERRAFORM_VERSION="0.13.4"
 TERRAGRUNT_VERSION="0.25.2"
 
