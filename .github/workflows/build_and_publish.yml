@@ -39,4 +39,5 @@ jobs:
       - name: Publish Docker image
         id: container_publish
         run: |
-          docker push $container_tag_latest $container_tag_sha
+          docker push $container_tag_latest
+          docker push $container_tag_sha
